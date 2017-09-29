@@ -1,0 +1,60 @@
+﻿  RAMSES_Particle_Manager.cpp
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses_particle_manager.h(25): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_info.hh(87): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_info.hh(88): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_info.hh(89): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_info.hh(117): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_info.hh(118): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_info.hh(329): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_particle_data.hh(474): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\ramses_particle_manager.cpp(38): warning C4018: '<=': signed/unsigned mismatch
+c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\ramses_particle_manager.cpp(89): warning C4018: '<=': signed/unsigned mismatch
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2316): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2335): note: see reference to function template instantiation '_OutIt std::_Copy_unchecked1<_InIt,_OutIt>(_InIt,_InIt,_OutIt,std::_General_ptr_iterator_tag)' being compiled
+          with
+          [
+              _OutIt=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _InIt=double *
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2344): note: see reference to function template instantiation '_OutIt std::_Copy_unchecked<_InIt,_Iter>(_InIt,_InIt,_OutIt)' being compiled
+          with
+          [
+              _OutIt=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _InIt=double *,
+              _Iter=std::back_insert_iterator<std::vector<float,std::allocator<float>>>
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2364): note: see reference to function template instantiation '_OutIt std::_Copy_no_deprecate1<double*,_OutIt>(_InIt,_InIt,_OutIt,std::input_iterator_tag,std::_Any_tag)' being compiled
+          with
+          [
+              _OutIt=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _InIt=double *
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xutility(2373): note: see reference to function template instantiation '_OutIt std::_Copy_no_deprecate<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' being compiled
+          with
+          [
+              _OutIt=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<double>>>
+          ]
+  c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\fortranunformatted_io.hh(195): note: see reference to function template instantiation '_OutIt std::copy<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<double>>>,_OutputIterator>(_InIt,_InIt,_OutIt)' being compiled
+          with
+          [
+              _OutIt=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _OutputIterator=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<double>>>
+          ]
+  c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\include\ramses\ramses_particle_data.hh(325): note: see reference to function template instantiation '_OutputIterator FortranUnformatted::read<_Basetype,_OutputIterator>(_OutputIterator)' being compiled
+          with
+          [
+              _OutputIterator=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _Basetype=double
+          ]
+  c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\ramses_particle_manager.cpp(42): note: see reference to function template instantiation '_OutputIterator RAMSES::PART::data::get_var<double,std::back_insert_iterator<std::vector<float,std::allocator<_Ty>>>>(const std::string &,_OutputIterator)' being compiled
+          with
+          [
+              _OutputIterator=std::back_insert_iterator<std::vector<float,std::allocator<float>>>,
+              _Ty=float
+          ]
+  ParticleViewer.vcxproj -> C:\Users\dsull\OneDrive\Documents\Visual Studio 2015\Projects\ParticleViewer\Debug\ParticleViewer.exe
+  ParticleViewer.vcxproj -> C:\Users\dsull\OneDrive\Documents\Visual Studio 2015\Projects\ParticleViewer\Debug\ParticleViewer.pdb (Full PDB)
