@@ -1,15 +1,26 @@
 
 #version 330 core
-in vec4 vertexColor;
+in float vIntensity;
+out vec4 fragColor;
 
-out vec4 color;
+uniform float uSigma;            // gaussian width (higher = tighter core)
+uniform float uIntensityScale;   // overall brightness scale for additive blending
 
-uniform sampler2D ourTexture1;
-uniform sampler2D ourTexture2;
-
+// Additive Gaussian splat for density accumulation
 void main()
 {
-	color = vertexColor;
+    // Normalized point coords in [-1,1]
+    vec2 pc = gl_PointCoord * 2.0 - 1.0;
+    float r2 = dot(pc, pc);
+    if (r2 > 1.0) discard; // circular sprite bound
+
+    // Gaussian kernel
+    float weight = exp(-r2 * uSigma);
+    float intensity = vIntensity * weight * uIntensityScale;
+
+    // Accumulate as near-white (slightly cool tint)
+    vec3 col = vec3(0.85, 0.9, 1.0) * intensity;
+    fragColor = vec4(col, 1.0);
 }
 
 /*

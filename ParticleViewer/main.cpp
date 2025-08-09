@@ -39,7 +39,7 @@ bool firstMouse = true;
 
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
-const GLfloat POINT_SIZE = 4.0f;
+const GLfloat POINT_SIZE = 6.0f;
 
 // The MAIN function, from here we start our application and run our Game loop
 int main()
@@ -60,7 +60,10 @@ int main()
 	glfwSetInputMode(display.getWindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 	// Setup some OpenGL options
-	glEnable(GL_DEPTH_TEST);
+	glDisable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    // Additive blending to accumulate density contributions
+    glBlendFunc(GL_ONE, GL_ONE);
 
 	// Setup and compile our shaders
 	Shader ourShader("./resources/shaders/particle.vs", "./resources/shaders/particle.frag");
@@ -104,7 +107,7 @@ int main()
 		Do_Movement();
 
 		// Clear the colorbuffer
-		glClearColor(0.9f, 0.9f, 0.9f, 1.0f);
+		glClearColor(0.02f, 0.02f, 0.03f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// Draw our first triangle
@@ -119,6 +122,20 @@ int main()
 		GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
 		GLint viewLoc = glGetUniformLocation(ourShader.Program, "view");
 		GLint projLoc = glGetUniformLocation(ourShader.Program, "projection");
+        // Compute point scale from FOV and viewport height (approximate)
+        float fovRadians = camera.Zoom;
+        float pointScale = (float)screenHeight / (2.0f * tanf(fovRadians * 0.5f));
+        GLint baseSizeLoc = glGetUniformLocation(ourShader.Program, "uPointBaseSize");
+        GLint scaleLoc = glGetUniformLocation(ourShader.Program, "uPointScale");
+		glUniform1f(baseSizeLoc, POINT_SIZE);
+		glUniform1f(scaleLoc, pointScale);
+
+        // Density splat shader params
+        GLint sigmaLoc = glGetUniformLocation(ourShader.Program, "uSigma");
+        GLint intenLoc = glGetUniformLocation(ourShader.Program, "uIntensityScale");
+        glUniform1f(sigmaLoc, 4.0f);         // Gaussian width
+        glUniform1f(intenLoc, 0.03f);        // Overall brightness scale
+
 		// Pass the matrices to the shader
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));

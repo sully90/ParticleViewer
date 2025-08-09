@@ -5,17 +5,14 @@ C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(63,10): warni
 C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(62,9): warning C4101: 'success': unreferenced local variable
   (compiling source file 'main.cpp')
   
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\RAMSES_Particle_Manager.h(24,32): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-  (compiling source file 'main.cpp')
-  
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(98,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(181,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(182,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(186,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(187,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(189,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(190,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(198,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(101,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(198,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(199,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(203,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(204,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(206,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(207,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(215,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   ParticleViewer.vcxproj -> C:\Users\dsull\code\ParticleViewer\x64\Debug\ParticleViewer.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

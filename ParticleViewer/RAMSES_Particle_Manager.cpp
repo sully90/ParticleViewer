@@ -130,9 +130,15 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 	}
 
 	std::random_shuffle(vec.begin(), vec.end());
-	this->mParticleArray = vec;
-	this->npart = this->mParticleArray.size();
-	std::cout << "Successfully loaded " << this->mParticleArray.size() << " particles."  << std::endl;
+    this->mParticleArray = vec;
+    this->npart = static_cast<int>(this->mParticleArray.size());
+
+    // Cap the number of particles to draw for performance (density splatting accumulates a lot)
+    const int MAX_DRAW = 400000; // recommended: 200k - 800k depending on GPU
+    this->npartDraw = std::min(this->npart, MAX_DRAW);
+
+    std::cout << "Successfully loaded " << this->mParticleArray.size()
+              << " particles. Drawing " << this->npartDraw << std::endl;
 }
 
 GLfloat * RAMSES_Particle_Manager::particlesArray()

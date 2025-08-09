@@ -20,8 +20,9 @@ class RAMSES_Particle_Manager
 public:
 	RAMSES_Particle_Manager(std::string filename);
 
-	int npart;
-	const int npartDraw = std::pow(32, 3);
+    int npart;
+    // Number of particles to draw (capped in constructor)
+    int npartDraw;
 	GLfloat *particlesArray();
 	std::vector<Particle> mParticleArray;
 
