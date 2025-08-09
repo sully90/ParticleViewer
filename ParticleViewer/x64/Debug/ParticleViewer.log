@@ -1,23 +1,178 @@
-﻿  main.cpp
+﻿  AMRGridRenderer.cpp
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(290,17): warning C4267: '=': conversion from 'size_t' to 'unsigned long', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(327,15): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(329,3): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(381,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(381,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(382,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(382,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(383,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(383,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(384,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(384,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(386,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(386,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(387,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(387,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(388,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(388,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(389,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(389,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(391,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(391,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(392,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(392,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(393,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(393,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(394,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(394,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+  
 C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(63,10): warning C4101: 'infoLog': unreferenced local variable
-  (compiling source file 'main.cpp')
+  (compiling source file 'AMRGridRenderer.cpp')
   
 C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(62,9): warning C4101: 'success': unreferenced local variable
-  (compiling source file 'main.cpp')
+  (compiling source file 'AMRGridRenderer.cpp')
   
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(101,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(198,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(199,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(203,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(204,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(206,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(207,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(215,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244: '=': conversion from '_Ty' to 'real_t', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:         with
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:         [
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:             _Ty=double
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:         ]
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:         and
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:         [
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:             real_t=float
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43): warning C4244:         ]
+  (compiling source file 'AMRGridRenderer.cpp')
+      C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(903,43):
+      the template instantiation context (the oldest one first) is
+          C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(32,119):
+          see reference to class template instantiation 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>' being compiled
+          C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(793,1):
+          while compiling class template member function 'void RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::read(void)'
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(33,12):
+              see the first reference to 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::read' in 'AMRGridRenderer::build'
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244: '=': conversion from '_Ty' to 'real_t', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:         with
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:         [
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:             _Ty=double
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:         ]
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:         and
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:         [
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:             real_t=float
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(910,43): warning C4244:         ]
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244: '=': conversion from '_Ty' to 'real_t', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:         with
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:         [
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:             _Ty=double
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:         ]
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:         and
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:         [
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:             real_t=float
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(917,43): warning C4244:         ]
+  (compiling source file 'AMRGridRenderer.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(771,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'AMRGridRenderer.cpp')
+      C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(771,2):
+      the template instantiation context (the oldest one first) is
+          C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(38,40):
+          see reference to function template instantiation 'bool RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::proto_iterator<RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>> *,unsigned int>::operator !=<RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>*>(const RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::proto_iterator<RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>> *,unsigned int> &) const' being compiled
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(38,5):
+              see the first reference to 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::proto_iterator<RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>> *,unsigned int>::operator !=' in 'AMRGridRenderer::build'
+          C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(766,1):
+          while compiling class template member function 'std::string RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::gen_fname(int)'
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(804,23):
+              see the first reference to 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::gen_fname' in 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::read'
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(33,12):
+              see the first reference to 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::read' in 'AMRGridRenderer::build'
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(783,14): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+      C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(783,14):
+      the template instantiation context (the oldest one first) is
+          C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(781,1):
+          while compiling class template member function 'std::string RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::rename_info2amr(const std::string &)'
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(597,73):
+              see the first reference to 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::rename_info2amr' in 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::tree'
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(32,123):
+              see the first reference to 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::tree' in 'AMRGridRenderer::build'
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(173,51): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'AMRGridRenderer.cpp')
+      C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(173,51):
+      the template instantiation context (the oldest one first) is
+          C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(38,37):
+          see reference to class template instantiation 'RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>' being compiled
+          C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(173,11):
+          while compiling class template member function 'unsigned int RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>::size(void)'
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_amr_data.hh(883,22):
+              see the first reference to 'RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>::size' in 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::read'
+              C:\Users\dsull\code\ParticleViewer\ParticleViewer\AMRGridRenderer.cpp(33,12):
+              see the first reference to 'RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<unsigned int,float>,RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<unsigned int,float>>>::read' in 'AMRGridRenderer::build'
+  
   ParticleViewer.vcxproj -> C:\Users\dsull\code\ParticleViewer\x64\Debug\ParticleViewer.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\coordinate_systems.frag
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\coordinate_systems.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\grid.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\grid.vs
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\particle.frag
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\particle.vs
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\posShader.frag
@@ -28,7 +183,7 @@ C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(215,28): warning C424
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\transform.vs
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\textures\awesomeface.png
   C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\textures\container.jpg
-  12 File(s) copied
+  14 File(s) copied
           1 file(s) copied.
           1 file(s) copied.
           1 file(s) copied.

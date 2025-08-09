@@ -13,6 +13,9 @@
 #include "Shader.h"
 #include "Camera.h"
 #include "RAMSES_Particle_Manager.h"
+#include "AMRGridRenderer.h"
+// Global pointer to allow key callback to toggle grid visibility
+static AMRGridRenderer* g_grid = nullptr;
 
 // GLM Mathemtics
 #include <glm/glm.hpp>
@@ -67,6 +70,12 @@ int main()
 
 	// Setup and compile our shaders
 	Shader ourShader("./resources/shaders/particle.vs", "./resources/shaders/particle.frag");
+
+	// Optional AMR grid renderer
+    AMRGridRenderer grid(fname);
+    grid.build(1, 5); // show a few levels; tune as needed
+    grid.setVisible(false);
+    g_grid = &grid;
 
 	GLfloat *vertices = partManager.particlesArray();
 
@@ -146,6 +155,9 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_POINTS, 0, partManager.npartDraw);
 		glBindVertexArray(0);
+
+        // Draw AMR grid if visible
+        grid.draw(view, projection);
 		// Swap the buffers
 		display.SwapBuffers();
 	}
@@ -184,6 +196,12 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	//cout << key << endl;
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
+
+    // Toggle AMR grid with 'G'
+    if (key == GLFW_KEY_G && action == GLFW_PRESS)
+    {
+        if (g_grid) g_grid->setVisible(!g_grid->isVisible());
+    }
 
 	if (action == GLFW_PRESS)
 		keys[key] = true;

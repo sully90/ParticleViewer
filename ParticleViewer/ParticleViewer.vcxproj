@@ -208,11 +208,13 @@ if exist "C:\Users\dsull\vcpkg\installed\$(VcpkgTriplet)\bin\glfw3.dll" copy /Y 
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Display.cpp" />
+    <ClCompile Include="AMRGridRenderer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="RAMSES_Particle_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AMRGridRenderer.h" />
     <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Display.h" />
     <ClInclude Include="include\Shader.h" />
@@ -226,6 +228,8 @@ if exist "C:\Users\dsull\vcpkg\installed\$(VcpkgTriplet)\bin\glfw3.dll" copy /Y 
     <ClInclude Include="include\RAMSES_Particle_Manager.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\shaders\grid.frag" />
+    <None Include="resources\shaders\grid.vs" />
     <None Include="resources\shaders\coordinate_systems.frag" />
     <None Include="resources\shaders\coordinate_systems.vs" />
     <None Include="resources\shaders\particle.frag" />
