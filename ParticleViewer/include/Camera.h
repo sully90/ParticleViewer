@@ -3,8 +3,7 @@
 // Std. Includes
 #include <vector>
 
-// GL Includes
-#include <GL/glew.h>
+// Avoid including OpenGL headers in this public header
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
@@ -21,11 +20,11 @@ enum Camera_Movement {
 };
 
 // Default camera values
-const GLfloat YAW = -90.0f;
-const GLfloat PITCH = 0.0f;
-const GLfloat SPEED = 1.0f;
-const GLfloat SENSITIVTY = 0.25f;
-const GLfloat ZOOM = 45.0f;
+const float YAW = -90.0f;
+const float PITCH = 0.0f;
+const float SPEED = 1.0f;
+const float SENSITIVTY = 0.25f;
+const float ZOOM = 45.0f;
 
 
 // An abstract camera class that processes input and calculates the corresponding Eular Angles, Vectors and Matrices for use in OpenGL
@@ -39,15 +38,15 @@ public:
 	glm::vec3 Right;
 	glm::vec3 WorldUp;
 	// Eular Angles
-	GLfloat Yaw;
-	GLfloat Pitch;
+    float Yaw;
+    float Pitch;
 	// Camera options
-	GLfloat MovementSpeed;
-	GLfloat MouseSensitivity;
-	GLfloat Zoom;
+    float MovementSpeed;
+    float MouseSensitivity;
+    float Zoom;
 
 	// Constructor with vectors
-	Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), GLfloat yaw = YAW, GLfloat pitch = PITCH) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVTY), Zoom(ZOOM)
+    Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVTY), Zoom(ZOOM)
 	{
 		this->Position = position;
 		this->originalPosition = position;
@@ -57,7 +56,7 @@ public:
 		this->updateCameraVectors();
 	}
 	// Constructor with scalar values
-	Camera(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat upX, GLfloat upY, GLfloat upZ, GLfloat yaw, GLfloat pitch) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVTY), Zoom(ZOOM)
+    Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVTY), Zoom(ZOOM)
 	{
 		this->Position = glm::vec3(posX, posY, posZ);
 		this->WorldUp = glm::vec3(upX, upY, upZ);
@@ -82,7 +81,7 @@ public:
 	}
 
 	// Processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
-	void ProcessKeyboard(Camera_Movement direction, GLfloat deltaTime)
+    void ProcessKeyboard(Camera_Movement direction, float deltaTime)
 	{
 		GLfloat velocity = this->MovementSpeed * deltaTime;
 		if (direction == FORWARD)
@@ -100,7 +99,7 @@ public:
 	}
 
 	// Processes input received from a mouse input system. Expects the offset value in both the x and y direction.
-	void ProcessMouseMovement(GLfloat xoffset, GLfloat yoffset, GLboolean constrainPitch = true)
+    void ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch = true)
 	{
 		xoffset *= this->MouseSensitivity;
 		yoffset *= this->MouseSensitivity;
@@ -122,7 +121,7 @@ public:
 	}
 
 	// Processes input received from a mouse scroll-wheel event. Only requires input on the vertical wheel-axis
-	void ProcessMouseScroll(GLfloat yoffset)
+    void ProcessMouseScroll(float yoffset)
 	{
 		if (this->Zoom >= 1.0f && this->Zoom <= 45.0f)
 			this->Zoom -= yoffset * this->MouseSensitivity;

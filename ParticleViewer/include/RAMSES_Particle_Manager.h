@@ -2,14 +2,13 @@
 #define RAMSES_PARTICLE_MANAGER_H
 
 // GLEW
-#define GLEW_STATIC
 #include <GL/glew.h>
 
 // GLFW
 #include <GLFW/glfw3.h>
 
 // GLM
-#include <glm\glm.hpp>
+#include <glm/glm.hpp>
 
 #include <iostream>
 #include <vector>

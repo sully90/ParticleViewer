@@ -1,7 +1,7 @@
 #ifndef PARTICLE_H
 #define PARTICLE_H
 
-#include <glm\glm.hpp>
+#include <glm/glm.hpp>
 
 class Particle
 {

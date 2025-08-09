@@ -1,8 +1,8 @@
 // Std. Includes
 #include <string>
+#include <iostream>
 
 // GLEW
-#define GLEW_STATIC
 #include <GL/glew.h>
 
 // GLFW
@@ -20,7 +20,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 // Other Libs
-#include <SOIL.h>
+// (SOIL was previously included but is not used and has been removed.)
 
 // Properties
 GLuint screenWidth = 1920/2, screenHeight = 1080/2;
@@ -39,7 +39,7 @@ bool firstMouse = true;
 
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
-const GLfloat POINT_SIZE = 1.5f;
+const GLfloat POINT_SIZE = 4.0f;
 
 // The MAIN function, from here we start our application and run our Game loop
 int main()
@@ -47,7 +47,7 @@ int main()
 	// Init GLFW
 	Display display(screenWidth, screenHeight, "ParticleViewer");
 
-	std::string fname = "D:\\data\\ramses\\output_00215\\info_00215.txt";
+	std::string fname = "C:\\Users\\dsull\\Downloads\\output_00101\\info_00101.txt";
 	RAMSES_Particle_Manager partManager(fname);
 	display.Create();
 
@@ -124,17 +124,10 @@ int main()
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
 		glBindVertexArray(VAO);
-		//for (GLuint i = 0; i < partManager.mParticleArray.size(); i++)
-		for (GLuint i = 0; i < partManager.npartDraw; i++)
-		{
-			// Calculate the model matrix for each object and pass it to shader before drawing
-			glm::mat4 model;
-			//model = glm::translate(model, partManager.mParticleArray[i + NPART_DRAW].position * 0.5f);
-			model = glm::translate(model, partManager.mParticleArray[i].position * 0.5f);
-			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
-			glDrawArrays(GL_POINTS, 0, 1);
-		}
+		// Draw all points directly from the VBO in one call
+		glm::mat4 model(1.0f);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_POINTS, 0, partManager.npartDraw);
 		glBindVertexArray(0);
 		// Swap the buffers
 		display.SwapBuffers();

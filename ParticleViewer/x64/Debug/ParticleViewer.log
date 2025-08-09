@@ -1,11 +1,38 @@
-﻿  RAMSES_Particle_Manager.cpp
-c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\ramses_particle_manager.cpp(1): fatal error C1083: Cannot open include file: 'RAMSES_Particle_Manager.h': No such file or directory
-  ParticleShaders.cpp
-c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\particleshaders.cpp(16): fatal error C1083: Cannot open include file: 'ParticleShaders.h': No such file or directory
-  Particle.cpp
-c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\particle.cpp(1): fatal error C1083: Cannot open include file: 'Particle.h': No such file or directory
-  main.cpp
-c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\main.cpp(6): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
-  Display.cpp
-c:\users\dsull\onedrive\documents\visual studio 2015\projects\particleviewer\particleviewer\display.cpp(1): fatal error C1083: Cannot open include file: 'Display.h': No such file or directory
-  Generating Code...
+﻿  main.cpp
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(63,10): warning C4101: 'infoLog': unreferenced local variable
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(62,9): warning C4101: 'success': unreferenced local variable
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\RAMSES_Particle_Manager.h(24,32): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(98,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(181,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(182,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(186,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(187,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(189,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(190,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(198,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  ParticleViewer.vcxproj -> C:\Users\dsull\code\ParticleViewer\x64\Debug\ParticleViewer.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\coordinate_systems.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\coordinate_systems.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\particle.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\particle.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\posShader.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\posShader.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\texture.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\texture.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\transform.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\transform.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\textures\awesomeface.png
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\textures\container.jpg
+  12 File(s) copied
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.

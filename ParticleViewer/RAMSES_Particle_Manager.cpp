@@ -1,8 +1,8 @@
 #include "RAMSES_Particle_Manager.h"
 
 // RAMSES
-#include "ramses\RAMSES_info.hh"
-#include "ramses\RAMSES_particle_data.hh"
+#include "ramses/RAMSES_info.hh"
+#include "ramses/RAMSES_particle_data.hh"
 
 #include <omp.h>
 
