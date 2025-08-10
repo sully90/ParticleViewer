@@ -10,7 +10,8 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 {
 	std::cout << "ParticleManager reading RAMSES dataset." << std::endl;
 	// Load the RAMSES particle data into vector<particle> arrays
-	RAMSES::snapshot rsnap(filename, RAMSES::version3);
+    RAMSES::snapshot rsnap(filename, RAMSES::version3);
+    const float invBoxlen = (rsnap.m_header.boxlen > 0.0) ? static_cast<float>(1.0 / rsnap.m_header.boxlen) : 1.0f;
 	std::cout << "aexp = " << rsnap.m_header.aexp << std::endl;
 	// Reserve memory in particle vector
 	int npart = (int)std::pow((double)rsnap.m_header.levelmax, 3.0f);
@@ -61,7 +62,7 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 				{
 					if (dmonly)
 					{
-						glm::vec3 pos(x[i], y[i], z[i]);
+                        glm::vec3 pos(x[i] * invBoxlen, y[i] * invBoxlen, z[i] * invBoxlen);
 						Particle newParticle(pos);
 						buffers[id].push_back(newParticle);
 					}
@@ -69,7 +70,7 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 					{
 						if (age[i] == 0)
 						{
-							glm::vec3 pos(x[i], y[i], z[i]);
+                            glm::vec3 pos(x[i] * invBoxlen, y[i] * invBoxlen, z[i] * invBoxlen);
 							Particle newParticle(pos);
 							buffers[id].push_back(newParticle);
 						}
@@ -112,7 +113,7 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 			{
 				if (dmonly)
 				{
-					glm::vec3 pos(x[i], y[i], z[i]);
+                    glm::vec3 pos(x[i] * invBoxlen, y[i] * invBoxlen, z[i] * invBoxlen);
 					Particle newParticle(pos);
 					vec.push_back(newParticle);
 				}
@@ -120,7 +121,7 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 				{
 					if (age[i] == 0)
 					{
-						glm::vec3 pos(x[i], y[i], z[i]);
+                        glm::vec3 pos(x[i] * invBoxlen, y[i] * invBoxlen, z[i] * invBoxlen);
 						Particle newParticle(pos);
 						vec.push_back(newParticle);
 					}
@@ -133,17 +134,30 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
     this->mParticleArray = vec;
     this->npart = static_cast<int>(this->mParticleArray.size());
 
-    // Cap the number of particles to draw for performance (density splatting accumulates a lot)
-    const int MAX_DRAW = 400000; // recommended: 200k - 800k depending on GPU
-    this->npartDraw = std::min(this->npart, MAX_DRAW);
+    // Apply configurable cap; -1 means draw all
+    if (m_maxParticles < 0) {
+        this->npartDraw = this->npart;
+    } else {
+        this->npartDraw = static_cast<int>(std::min<long long>(this->npart, m_maxParticles));
+    }
 
     std::cout << "Successfully loaded " << this->mParticleArray.size()
               << " particles. Drawing " << this->npartDraw << std::endl;
 }
+void RAMSES_Particle_Manager::setMaxParticles(long long maxParticles) {
+    m_maxParticles = maxParticles;
+}
 
 GLfloat * RAMSES_Particle_Manager::particlesArray()
 {
-	GLfloat *pArray = new float[this->npartDraw * 3];
+    // Ensure draw count honors current max setting
+    if (m_maxParticles < 0) {
+        this->npartDraw = this->npart;
+    } else {
+        this->npartDraw = static_cast<int>(std::min<long long>(this->npart, m_maxParticles));
+    }
+
+    GLfloat *pArray = new float[this->npartDraw * 3];
 
 	//int di = this->mParticleArray.size() / npartDraw;
 	for (int i = 0; i < this->npartDraw; i++)

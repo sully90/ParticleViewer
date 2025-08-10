@@ -39,6 +39,7 @@ private:
   // Minimal shader for grid lines
   std::unique_ptr<Shader> m_shader; // expects grid.vs/grid.frag
 
+
   // Helper: add AABB as 12 line segments
   void appendBoxLines(const glm::vec3& minp, const glm::vec3& maxp, std::vector<glm::vec3>& out);
 };

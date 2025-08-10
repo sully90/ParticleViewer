@@ -1,3 +1,4 @@
+
 #include "AMRGridRenderer.h"
 
 #include <GL/glew.h>
@@ -32,16 +33,25 @@ void AMRGridRenderer::build(unsigned minLevel, unsigned maxLevel) {
   RAMSES::AMR::tree<RAMSES::AMR::cell_locally_essential<>, RAMSES::AMR::level<RAMSES::AMR::cell_locally_essential<>>> tree(*m_snap, 1, ilevelMax, minLevel);
   tree.read();
 
+  // Normalize coordinates into unit cube using boxlen
+  const float invBoxlen = (m_snap->m_header.boxlen > 0.0)
+                            ? static_cast<float>(1.0 / m_snap->m_header.boxlen)
+                            : 1.0f;
+
   std::vector<glm::vec3> lineVerts;
-  // Iterate levels and add each cell's AABB as lines
+  lineVerts.reserve(1 << 20);
+  // Iterate levels and add each CHILD CELL's AABB as lines to match Hydro sampling
   for (unsigned lvl=minLevel; lvl<=ilevelMax; ++lvl) {
+    float dx2 = (0.5f / std::pow(2.0f, (float)lvl + 1.0f)) * invBoxlen;
     for (auto it = tree.begin(lvl); it != tree.end(lvl); ++it) {
-      auto gc = tree.grid_pos<float>(it);
-      glm::vec3 gc3(gc.x, gc.y, gc.z);
-      float dx2 = 0.5f / std::pow(2.0f, (float)lvl);
-      glm::vec3 minp = gc3 - glm::vec3(dx2);
-      glm::vec3 maxp = gc3 + glm::vec3(dx2);
-      appendBoxLines(minp, maxp, lineVerts);
+      for (int c = 0; c < 8; ++c) {
+        auto cp = tree.cell_pos<float>(it, c);
+        glm::vec3 cc(cp.x * invBoxlen, cp.y * invBoxlen, cp.z * invBoxlen);
+        float halfSize = dx2;
+        glm::vec3 minp = cc - glm::vec3(halfSize);
+        glm::vec3 maxp = cc + glm::vec3(halfSize);
+        appendBoxLines(minp, maxp, lineVerts);
+      }
     }
   }
 
@@ -63,9 +73,13 @@ void AMRGridRenderer::draw(const glm::mat4& view, const glm::mat4& proj) {
   GLint colorLoc = glGetUniformLocation(m_shader->Program, "uColor");
   glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
   glUniformMatrix4fv(projLoc, 1, GL_FALSE, &proj[0][0]);
-  glUniform3f(colorLoc, 0.15f, 0.8f, 0.2f); // greenish grid
+  glUniform3f(colorLoc, 1.0f, 1.0f, 1.0f); // white grid
 
   glBindVertexArray(m_vao);
+  // Use standard alpha blending for grid so alpha matters
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
   glDrawArrays(GL_LINES, 0, (GLsizei)(m_numLines * 2));
   glBindVertexArray(0);
+  // Restore additive blending for other passes
+  glBlendFunc(GL_ONE, GL_ONE);
 }

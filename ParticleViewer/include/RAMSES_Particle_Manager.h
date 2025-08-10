@@ -23,11 +23,14 @@ public:
     int npart;
     // Number of particles to draw (capped in constructor)
     int npartDraw;
+    // Limit how many particles to draw (-1 = all)
+    void setMaxParticles(long long maxParticles);
 	GLfloat *particlesArray();
 	std::vector<Particle> mParticleArray;
 
 	~RAMSES_Particle_Manager();
 private:
+    long long m_maxParticles{-1};
 	
 };
 

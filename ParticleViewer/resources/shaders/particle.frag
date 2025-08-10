@@ -6,7 +6,7 @@ out vec4 fragColor;
 uniform float uSigma;            // gaussian width (higher = tighter core)
 uniform float uIntensityScale;   // overall brightness scale for additive blending
 
-// Additive Gaussian splat for density accumulation
+// Additive Gaussian splat for particle glow
 void main()
 {
     // Normalized point coords in [-1,1]
@@ -17,9 +17,9 @@ void main()
     // Gaussian kernel
     float weight = exp(-r2 * uSigma);
     float intensity = vIntensity * weight * uIntensityScale;
-
-    // Accumulate as near-white (slightly cool tint)
-    vec3 col = vec3(0.85, 0.9, 1.0) * intensity;
+    // Constant warm color scaled by intensity
+    vec3 warm = vec3(1.00, 0.55, 0.10);
+    vec3 col = warm * intensity;
     fragColor = vec4(col, 1.0);
 }
 
