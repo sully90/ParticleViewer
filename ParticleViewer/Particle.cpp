@@ -4,7 +4,7 @@
 
 Particle::Particle(glm::vec3 position)
 {
-	this->position = position;
+    this->position = position;
 }
 
 

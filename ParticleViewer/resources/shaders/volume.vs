@@ -2,7 +2,6 @@
 layout (location = 0) in vec2 aPos;
 
 out vec2 vUV;
-// Pass through NDC position for accurate ray setup if needed
 out vec2 vNdc;
 
 void main() {

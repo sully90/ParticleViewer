@@ -7,6 +7,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+// Define GLfloat if not already defined
+typedef float GLfloat;
+
 
 
 // Defines several possible options for camera movement. Used as abstraction to stay away from window-system specific input methods
@@ -16,7 +19,9 @@ enum Camera_Movement {
 	LEFT,
 	RIGHT,
 	UP,
-	DOWN
+	DOWN,
+	ROTATE_LEFT,
+	ROTATE_RIGHT
 };
 
 // Default camera values
@@ -96,6 +101,16 @@ public:
 			this->Position += this->Up * velocity;
 		if (direction == DOWN)
 			this->Position -= this->Up * velocity;
+		if (direction == ROTATE_LEFT) {
+			// Rotate around Y-axis (yaw)
+			this->Yaw -= 45.0f * deltaTime;  // 45 degrees per second
+			this->updateCameraVectors();
+		}
+		if (direction == ROTATE_RIGHT) {
+			// Rotate around Y-axis (yaw)
+			this->Yaw += 45.0f * deltaTime;  // 45 degrees per second
+			this->updateCameraVectors();
+		}
 	}
 
 	// Processes input received from a mouse input system. Expects the offset value in both the x and y direction.

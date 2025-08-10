@@ -1,0 +1,122 @@
+﻿  main.cpp
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(63,10): warning C4101: 'infoLog': unreferenced local variable
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\Shader.h(62,9): warning C4101: 'success': unreferenced local variable
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(290,17): warning C4267: '=': conversion from 'size_t' to 'unsigned long', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(327,15): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(329,3): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(381,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(381,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(382,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(382,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(383,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(383,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(384,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(384,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(386,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(386,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(387,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(387,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(388,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(388,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(389,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(389,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(391,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(391,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(392,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(392,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(393,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(393,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(394,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\include\ramses\RAMSES_info.hh(394,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(237,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(593,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(594,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(598,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(599,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(601,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(602,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\dsull\code\ParticleViewer\ParticleViewer\main.cpp(610,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  ParticleViewer.vcxproj -> C:\Users\dsull\code\ParticleViewer\x64\Debug\ParticleViewer.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\coordinate_systems.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\coordinate_systems.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\grid.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\grid.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\hydro.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\hydro.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\particle.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\particle.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\posShader.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\posShader.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\texture.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\texture.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\transform.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\transform.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\volume.frag
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\shaders\volume.vs
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\textures\awesomeface.png
+  C:\Users\dsull\code\ParticleViewer\ParticleViewer\resources\textures\container.jpg
+  18 File(s) copied
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.

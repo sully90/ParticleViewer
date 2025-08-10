@@ -14,6 +14,7 @@
 // path (from info_XXXXX.txt) and draws child cell centers as lines/boxes.
 class AMRGridRenderer {
 public:
+  enum class NormalizationMode { Auto = 0, UnitCube = 1, Boxlen = 2 };
   explicit AMRGridRenderer(const std::string& infoFilePath);
   ~AMRGridRenderer();
 
@@ -26,6 +27,9 @@ public:
   // Toggle visibility
   void setVisible(bool v) { m_visible = v; }
   bool isVisible() const { return m_visible; }
+  void setNormalizationMode(NormalizationMode m) { m_normMode = m; }
+  NormalizationMode getNormalizationMode() const { return m_normMode; }
+  void setTargetBounds(const glm::vec3& minp, const glm::vec3& maxp) { m_targetMin = minp; m_targetMax = maxp; }
 
 private:
   bool m_visible{false};
@@ -33,6 +37,7 @@ private:
   // GL resources
   unsigned int m_vao{0}, m_vbo{0};
   size_t m_numLines{0};
+  unsigned m_minBuiltLevel{1}, m_maxBuiltLevel{1};
 
   std::unique_ptr<RAMSES::snapshot> m_snap;
 
@@ -40,6 +45,9 @@ private:
   std::unique_ptr<Shader> m_shader; // expects grid.vs/grid.frag
 
 
-  // Helper: add AABB as 12 line segments
-  void appendBoxLines(const glm::vec3& minp, const glm::vec3& maxp, std::vector<glm::vec3>& out);
+  // Helper: add AABB as 12 line segments with level value per vertex
+  void appendBoxLines(const glm::vec3& minp, const glm::vec3& maxp, float level, std::vector<glm::vec4>& out);
+  NormalizationMode m_normMode{NormalizationMode::Boxlen};
+  glm::vec3 m_targetMin{0.0f};
+  glm::vec3 m_targetMax{1.0f};
 };

@@ -39,7 +39,7 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 			for (int icpu = 1; icpu <= rsnap.m_header.ncpu; icpu++)
 			{
 				RAMSES::PART::data local_data(rsnap, icpu);
-				std::vector<float> x, y, z, age;
+            std::vector<float> x, y, z, age;
 				local_data.get_var<double>("position_x", std::back_inserter(x));
 
 				y.reserve(x.size());
@@ -87,47 +87,55 @@ RAMSES_Particle_Manager::RAMSES_Particle_Manager(std::string filename)
 		}
 	}
 	else {
-		for (int icpu = 1; icpu <= rsnap.m_header.ncpu; icpu++)
-		{
-			std::cout << "Reading icpu " << icpu << "/" << rsnap.m_header.ncpu << std::endl;
-			RAMSES::PART::data data(rsnap, icpu);
-			std::vector<float> x, y, z, age;
-			data.get_var<double>("position_x", std::back_inserter(x));
+        for (int icpu = 1; icpu <= rsnap.m_header.ncpu; icpu++)
+        {
+            std::cout << "Reading icpu " << icpu << "/" << rsnap.m_header.ncpu << std::endl;
+            try {
+                RAMSES::PART::data data(rsnap, icpu);
+                std::vector<float> x, y, z, age;
+                try { data.get_var<double>("position_x", std::back_inserter(x)); }
+                catch (...) { std::cerr << "Warn: failed reading position_x for icpu " << icpu << std::endl; continue; }
 
-			y.reserve(x.size());
-			z.reserve(x.size());
-			age.reserve(x.size());
+                y.reserve(x.size());
+                z.reserve(x.size());
+                age.reserve(x.size());
 
-			data.get_var<double>("position_y", std::back_inserter(y));
-			data.get_var<double>("position_z", std::back_inserter(z));
+                try { data.get_var<double>("position_y", std::back_inserter(y)); }
+                catch (...) { std::cerr << "Warn: failed reading position_y for icpu " << icpu << std::endl; continue; }
+                try { data.get_var<double>("position_z", std::back_inserter(z)); }
+                catch (...) { std::cerr << "Warn: failed reading position_z for icpu " << icpu << std::endl; continue; }
 
-			try
-			{
-				data.get_var<double>("age", std::back_inserter(age));
-			}
-			catch (...) {
-				dmonly = true;
-			}
+                try { data.get_var<double>("age", std::back_inserter(age)); }
+                catch (...) { dmonly = true; }
 
-			for (size_t i = 0; i < x.size(); i++)
-			{
-				if (dmonly)
-				{
-                    glm::vec3 pos(x[i] * invBoxlen, y[i] * invBoxlen, z[i] * invBoxlen);
-					Particle newParticle(pos);
-					vec.push_back(newParticle);
-				}
-				else
-				{
-					if (age[i] == 0)
-					{
-                        glm::vec3 pos(x[i] * invBoxlen, y[i] * invBoxlen, z[i] * invBoxlen);
-						Particle newParticle(pos);
-						vec.push_back(newParticle);
-					}
-				}
-			}
-		}
+            // Defensive: ensure arrays are consistent; limit to shortest length
+            size_t n = std::min(x.size(), std::min(y.size(), z.size()));
+            if (n == 0) {
+                std::cerr << "Warn: empty positions for icpu " << icpu << std::endl;
+                continue;
+            }
+            // Normalize by boxlen only (RAMSES domain is [0,boxlen])
+            float scale = invBoxlen;
+            for (size_t i = 0; i < n; i++)
+                {
+                glm::vec3 pos(x[i] * scale, y[i] * scale, z[i] * scale);
+                    Particle newParticle(pos);
+                    bool isStar = false;
+                    if (!dmonly && i < age.size()) {
+                        // RAMSES convention: age > 0 indicates stars; treat DM as not stars
+                        isStar = (age[i] > 0);
+                    }
+                    newParticle.isStar = isStar;
+                    vec.push_back(newParticle);
+                }
+            } catch (const std::exception& e) {
+                std::cerr << "Error reading icpu " << icpu << ": " << e.what() << std::endl;
+                continue;
+            } catch (...) {
+                std::cerr << "Unknown error reading icpu " << icpu << std::endl;
+                continue;
+            }
+        }
 	}
 
 	std::random_shuffle(vec.begin(), vec.end());

@@ -9,6 +9,7 @@ public:
 	Particle(glm::vec3 position);
 
 	glm::vec3 position;
+    bool isStar{false};
 
 	virtual ~Particle();
 };

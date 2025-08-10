@@ -5,6 +5,9 @@ out vec4 fragColor;
 
 uniform float uSigma;            // gaussian width (higher = tighter core)
 uniform float uIntensityScale;   // overall brightness scale for additive blending
+uniform vec3 uColor;             // particle color
+uniform float uTime;             // time for twinkle
+uniform float uTwinkleAmp;       // twinkle amplitude (0 = off)
 
 // Additive Gaussian splat for particle glow
 void main()
@@ -16,10 +19,10 @@ void main()
 
     // Gaussian kernel
     float weight = exp(-r2 * uSigma);
-    float intensity = vIntensity * weight * uIntensityScale;
+    float twinkle = 1.0 + uTwinkleAmp * sin(uTime * 8.0 + gl_FragCoord.x * 0.05 + gl_FragCoord.y * 0.07);
+    float intensity = vIntensity * weight * uIntensityScale * twinkle;
     // Constant warm color scaled by intensity
-    vec3 warm = vec3(1.00, 0.55, 0.10);
-    vec3 col = warm * intensity;
+    vec3 col = uColor * intensity;
     fragColor = vec4(col, 1.0);
 }
 
